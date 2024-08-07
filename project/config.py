@@ -1,5 +1,6 @@
 # API2/project/config.py
+import os
 
 class Config:
-    SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:12345@localhost:5432/apicrud'
+    SQLALCHEMY_DATABASE_URI = os.getenv('SQLALCHEMY_DATABASE_URI')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
